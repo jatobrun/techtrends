@@ -1,0 +1,51 @@
+## Docker commands used to build the application
+
+```bash
+docker build -t techtrends .
+```
+
+## Docker commands used to run the application
+
+```bash
+docker run -d -p 7111:3111 --name techtrends techtrends 
+```
+
+## Docker commands used to get the application logs
+
+```bash
+docker logs -f techtrends
+```
+
+## Logs from the container running the TechTrends application
+
+```bash
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug:15/04/2023, 17:39:03,  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug:15/04/2023, 17:39:03,  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:15/04/2023, 17:39:59, 172.17.0.1 - - [15/Apr/2023 17:39:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:15/04/2023, 17:39:59, 172.17.0.1 - - [15/Apr/2023 17:39:59] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:15/04/2023, 17:40:01, The page About was render
+INFO:werkzeug:15/04/2023, 17:40:01, 172.17.0.1 - - [15/Apr/2023 17:40:01] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:15/04/2023, 17:40:01, 172.17.0.1 - - [15/Apr/2023 17:40:01] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:15/04/2023, 17:40:04, 172.17.0.1 - - [15/Apr/2023 17:40:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:15/04/2023, 17:40:04, 172.17.0.1 - - [15/Apr/2023 17:40:04] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:15/04/2023, 17:40:05, Article 2020 CNCF Annual Report retrieve
+INFO:werkzeug:15/04/2023, 17:40:05, 172.17.0.1 - - [15/Apr/2023 17:40:05] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:15/04/2023, 17:40:05, 172.17.0.1 - - [15/Apr/2023 17:40:05] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:15/04/2023, 17:40:10, Article with id 123131 does not exists
+INFO:werkzeug:15/04/2023, 17:40:10, 172.17.0.1 - - [15/Apr/2023 17:40:10] "GET /123131 HTTP/1.1" 404 -
+INFO:werkzeug:15/04/2023, 17:40:10, 172.17.0.1 - - [15/Apr/2023 17:40:10] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:15/04/2023, 17:40:12, 172.17.0.1 - - [15/Apr/2023 17:40:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:15/04/2023, 17:40:12, 172.17.0.1 - - [15/Apr/2023 17:40:12] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:15/04/2023, 17:40:13, 172.17.0.1 - - [15/Apr/2023 17:40:13] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:15/04/2023, 17:40:13, 172.17.0.1 - - [15/Apr/2023 17:40:13] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:15/04/2023, 17:40:29, The Article with title example post was create successfully
+INFO:werkzeug:15/04/2023, 17:40:29, 172.17.0.1 - - [15/Apr/2023 17:40:29] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:15/04/2023, 17:40:29, 172.17.0.1 - - [15/Apr/2023 17:40:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:15/04/2023, 17:40:29, 172.17.0.1 - - [15/Apr/2023 17:40:29] "GET /static/css/main.css HTTP/1.1" 304 -
+```
